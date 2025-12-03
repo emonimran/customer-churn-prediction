@@ -1,9 +1,0 @@
-file,description,primary_key,key_fields,use_case
-kpi_summary.csv,Executive KPI summary with overall business metrics,None (single row summary),"total_customers, churn_rate_pct, total_annual_revenue, annual_revenue_lost","Executive dashboard, high-level reporting"
-customers_with_predictions.csv,Complete customer dataset with ML predictions and risk scores,customerID,"ChurnProbability, RiskSegment, ChurnPrediction, Churn (actual)","Detailed analysis, customer-level interventions, Power BI/Tableau"
-high_risk_customers.csv,High-risk customers (70%+ churn probability) - priority retention list,customerID,"ChurnProbability, MonthlyCharges, Contract, tenure","Retention team priority list, proactive outreach campaigns"
-risk_segment_summary.csv,Aggregated statistics by risk segment (High/Medium/Low),RiskSegment,"Customers, Churned, ActualChurnRate, AvgMonthly","Segment analysis, risk profiling, executive summaries"
-contract_churn_summary.csv,"Churn analysis by contract type (Month-to-month, One year, Two year)",Contract,"total_customers, churned, churn_rate_pct","Contract strategy analysis, retention planning"
-payment_churn_summary.csv,Churn analysis by payment method,PaymentMethod,"total_customers, churned, churn_rate_pct","Payment method optimization, churn driver analysis"
-revenue_at_risk_summary.csv,Revenue calculations and churn financial impact,None,"total_revenue, churned_revenue, retained_revenue","Financial impact analysis, CFO reporting"
-tenure_churn_summary.csv,Churn rate trends by customer tenure months,tenure,"total_customers, churned, churn_rate_pct","Lifecycle analysis, retention strategy by tenure stage"

@@ -33,30 +33,25 @@ A comprehensive data analysis project identifying **$4.9M in annual revenue prot
 ```
 Customer Churn Prediction & Analysis/
 │
-├── 📓 notebooks/               # Analysis notebooks (code-focused)
-│   ├── 01_data_exploration.ipynb       # EDA & data cleaning
-│   ├── 02_sql_analysis.ipynb           # SQL business intelligence
-│   ├── 03_modeling.ipynb               # Machine learning models
-│   └── 04_dashboard_prep.ipynb         # Dashboard data preparation
+├── 📓 notebooks/                    # Analysis notebooks
+│   ├── 01_data_exploration.ipynb    # EDA & data cleaning
+│   ├── 02_sql_analysis.ipynb        # SQL business intelligence
+│   ├── 03_modeling.ipynb            # Machine learning models
+│   └── 04_dashboard_prep.ipynb      # Dashboard data preparation
 │
-├── 📂 data/                    # Dataset
-│   └── raw/                           # Original CSV file (7,043 customers)
+├── 📂 data/                         # Dataset
+│   ├── raw/telco_customer_churn.csv # Original data (7,043 customers)
+│   └── data_dictionary.csv          # Field definitions
 │
-├── 🔍 sql/                     # SQL queries
-│   └── churn_analysis_queries.sql     # 10 business intelligence queries
+├── 🔍 sql/                          # SQL queries
+│   └── churn_analysis_queries.sql   # 10 business intelligence queries
 │
-├── 🐍 scripts/                 # Python automation scripts
-│   ├── create_enhanced_excel.py       # Excel report generator
-│   └── verify_excel_formulas.py       # Formula validation
+├── 🐍 scripts/                      # Python automation
+│   ├── create_enhanced_excel.py     # Excel report generator
+│   └── verify_excel_formulas.py     # Formula validation
 │
-└── 🎯 presentation/            # Project showcase materials
-    ├── README.md                      # Presentation guide
-    ├── executive_summary.md           # 1-page overview
-    ├── complete_analysis_report.md    # Full analysis report
-    ├── business_insights.md           # Key findings
-    ├── notebook_summaries/            # Analysis findings (no code)
-    ├── visualizations/                # Charts & graphs (PNG)
-    └── data_dictionaries/             # Stakeholder documentation
+└── 📊 visualizations/               # Charts & graphs
+    └── *.png                        # High-resolution visualizations
 ```
 
 ---
@@ -89,24 +84,12 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 
 ---
 
-## 📚 Documentation Navigator
+## 📚 How to Navigate
 
-### **🎯 I'm a Recruiter/Hiring Manager**
-**Go to:** `presentation/` folder
-- Executive summary (1-page overview)
-- Business insights (findings & recommendations)
-- Complete analysis report (detailed findings)
-
-### **📊 I Want to See the Analysis**
-**Go to:** `notebooks/` folder
-- Clean, executable notebooks
-- Run to reproduce all results
-- Generates models, visualizations, and reports
-
-### **📈 I Want Charts/Visuals**
-**Go to:** `presentation/visualizations/`
-- High-resolution charts (PNG)
-- Ready for presentations and reports
+- **See the analysis:** Run `notebooks/` in order (01→04)
+- **View visualizations:** Check `visualizations/` folder
+- **Understand the data:** See `data/data_dictionary.csv`
+- **Review SQL queries:** Open `sql/churn_analysis_queries.sql`
 
 ---
 
@@ -187,15 +170,14 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 
 ---
 
-## 🎯 Navigation Quick Links
+## 🎯 Quick Start
 
-| I Want To... | Go Here |
-|-------------|---------|
-| **Run the analysis** | `notebooks/` (run in order 01→04) |
-| **See visualizations** | `presentation/visualizations/` |
-| **Read full analysis** | `presentation/complete_analysis_report.md` |
-| **View executive summary** | `presentation/executive_summary.md` |
-| **Check data dictionary** | `data/data_dictionary.csv` |
+| Action | Location |
+|--------|----------|
+| **Run notebooks** | `notebooks/` (run 01→04 in order) |
+| **View charts** | `visualizations/` |
+| **Check data fields** | `data/data_dictionary.csv` |
+| **See SQL queries** | `sql/churn_analysis_queries.sql` |
 
 ---
 
