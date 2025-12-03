@@ -42,3 +42,9 @@ SQLite doesn't have some PostgreSQL window functions, so I had to do certain agg
 
 Could improve this with survival analysis to predict *when* customers will churn, not just if they will. Also want to compare XGBoost/LightGBM—they usually beat Random Forest on tabular data.
 
+## Contact
+
+**Md Imran Hossain**
+- Portfolio: [connectimran.netlify.app](https://connectimran.netlify.app)
+- LinkedIn: [linkedin.com/in/mdimranhossain118](https://linkedin.com/in/mdimranhossain118)
+- Email: imranhossain.moh@gmail.com
