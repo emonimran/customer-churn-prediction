@@ -1,6 +1,6 @@
 # Customer Churn Prediction & Analysis
 
-**Professional Data Analysis Portfolio Project**
+**End-to-end data science project analyzing customer churn using Python, SQL, and machine learning**
 
 ---
 
