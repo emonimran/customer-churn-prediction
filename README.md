@@ -49,14 +49,6 @@ Customer Churn Prediction & Analysis/
 │   ├── create_enhanced_excel.py       # Excel report generator
 │   └── verify_excel_formulas.py       # Formula validation
 │
-├── 🛠️ dev_docs/                # Technical documentation
-│   ├── README.md                      # Developer guide
-│   ├── setup_guide.md                 # Environment setup
-│   ├── sql_concepts.md                # SQL explanations
-│   ├── troubleshooting.md             # Common issues
-│   ├── data_dictionary.csv            # Field definitions
-│   └── metrics_reference.md           # Metric calculations
-│
 └── 🎯 presentation/            # Project showcase materials
     ├── README.md                      # Presentation guide
     ├── executive_summary.md           # 1-page overview
@@ -98,13 +90,6 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 ---
 
 ## 📚 Documentation Navigator
-
-### **👩‍💻 I'm a Developer/Collaborator**
-**Go to:** `dev_docs/` folder
-- Setup guide for environment configuration
-- SQL concepts and query documentation
-- Python script explanations
-- Troubleshooting guide
 
 ### **🎯 I'm a Recruiter/Hiring Manager**
 **Go to:** `presentation/` folder
@@ -210,9 +195,7 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 | **See visualizations** | `presentation/visualizations/` |
 | **Read full analysis** | `presentation/complete_analysis_report.md` |
 | **View executive summary** | `presentation/executive_summary.md` |
-| **Get setup help** | `dev_docs/setup_guide.md` |
-| **Learn SQL concepts** | `dev_docs/sql_concepts.md` |
-| **Troubleshoot issues** | `dev_docs/troubleshooting.md` |
+| **Check data dictionary** | `data/data_dictionary.csv` |
 
 ---
 
