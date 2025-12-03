@@ -62,7 +62,6 @@ Customer Churn Prediction & Analysis/
     ├── executive_summary.md           # 1-page overview
     ├── complete_analysis_report.md    # Full analysis report
     ├── business_insights.md           # Key findings
-    ├── portfolio_case_study.md        # Portfolio writeup
     ├── notebook_summaries/            # Analysis findings (no code)
     ├── visualizations/                # Charts & graphs (PNG)
     └── data_dictionaries/             # Stakeholder documentation
@@ -110,7 +109,6 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 ### **🎯 I'm a Recruiter/Hiring Manager**
 **Go to:** `presentation/` folder
 - Executive summary (1-page overview)
-- Portfolio case study (complete project story)
 - Business insights (findings & recommendations)
 - Complete analysis report (detailed findings)
 
@@ -207,9 +205,8 @@ jupyter notebook notebooks/01_data_exploration.ipynb
 ## 🎯 Navigation Quick Links
 
 | I Want To... | Go Here |
-|-------------|---------||
+|-------------|---------|
 | **Run the analysis** | `notebooks/` (run in order 01→04) |
-| **Showcase in portfolio** | `presentation/portfolio_case_study.md` |
 | **See visualizations** | `presentation/visualizations/` |
 | **Read full analysis** | `presentation/complete_analysis_report.md` |
 | **View executive summary** | `presentation/executive_summary.md` |
