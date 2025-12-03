@@ -1,0 +1,4 @@
+file,description,primary_key
+kpi_summary.csv,"Top-level KPIs: total_customers, total_churned, churn_rate, avg_monthly_charge",
+contract_churn_summary.csv,Churn rates by Contract,Contract
+payment_churn_summary.csv,Churn rates by PaymentMethod,PaymentMethod

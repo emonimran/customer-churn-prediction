@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (keep raw, exclude processed to show you can generate)
+data/processed/*.db
+data/processed/*.sqlite
+data/dashboard_ready/*.csv
+
+# Models (too large, can regenerate)
+models/*.joblib
+models/*.pkl
+models/*.h5
+
+# Output files (regenerated)
+outputs/figures/*.png
+outputs/reports/*.pdf
+
+# Excel files (can regenerate)
+excel/*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Backup files
+*_BACKUP.md
+*_OLD.md
+
+# Temp files
+*.tmp
+*.log
