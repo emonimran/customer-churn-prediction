@@ -1,8 +1,7 @@
--- Customer Churn Analysis SQL Queries
--- Generated from 02_sql_analysis.ipynb
+-- Customer Churn Analysis
+-- SQLite queries from notebook analysis
 
--- Query 01
--- Query 01: Churn rate by Contract
+-- Churn rate by contract type
 SELECT Contract,
        COUNT(*) AS total_customers,
        SUM(CASE WHEN Churn=1 THEN 1 ELSE 0 END) AS churned_customers,

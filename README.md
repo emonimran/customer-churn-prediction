@@ -1,115 +1,44 @@
-# Customer Churn Prediction & Analysis
+# Customer Churn Analysis
 
-**End-to-end data science project analyzing customer churn using Python, SQL, and machine learning**
+Analyzed 7,032 telecom customers to figure out why people cancel their service and what we could do about it.
 
----
+## What I Found
 
-## Overview
+Contract type makes the biggest difference:
+- Month-to-month customers: 42.7% churn rate
+- Two-year contracts: 2.8% churn rate
 
-Analyzed 7,032 telecom customer records to identify churn patterns and build predictive models. The analysis revealed that contract type is the strongest predictor of churn, with month-to-month customers churning at 42.7% vs 2.8% for two-year contracts.
+That's a 15x difference. Also found that new customers (0-6 months) churn at 51%, while long-term customers (37+ months) only churn at 6%. Payment method matters too—electronic check users churn at 45% vs 15% for credit card auto-pay.
 
-**Key Results:**
-- Built Random Forest model achieving 85% accuracy
-- Identified $4.9M revenue protection opportunity through targeted retention
-- Developed SQL-based business intelligence queries for ongoing monitoring
+Built a Random Forest model that predicts churn with 85% accuracy. Identified about $358K in annual revenue we could save by targeting high-risk month-to-month customers.
 
----
-
-
-
-## 🗂️ Project Structure
-
-```
-Customer Churn Prediction & Analysis/
-│
-├── 📓 notebooks/                    # Analysis notebooks
-│   ├── 01_data_exploration.ipynb    # EDA & data cleaning
-│   ├── 02_sql_analysis.ipynb        # SQL business intelligence
-│   ├── 03_modeling.ipynb            # Machine learning models
-│   └── 04_dashboard_prep.ipynb      # Dashboard data preparation
-│
-├── 📂 data/                         # Dataset
-│   ├── raw/telco_customer_churn.csv # Original data (7,043 customers)
-│   └── data_dictionary.csv          # Field definitions
-│
-├── 🔍 sql/                          # SQL queries
-│   └── churn_analysis_queries.sql   # 10 business intelligence queries
-│
-├── 🐍 scripts/                      # Python automation
-│   ├── create_enhanced_excel.py     # Excel report generator
-│   └── verify_excel_formulas.py     # Formula validation
-│
-└── 📊 visualizations/               # Charts & graphs
-    └── *.png                        # High-resolution visualizations
-```
-
----
-
-## Setup
+## How to Run
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 jupyter notebook
 ```
 
-Run notebooks in order: `01_data_exploration.ipynb` → `02_sql_analysis.ipynb` → `03_modeling.ipynb` → `04_dashboard_prep.ipynb`
+Run the notebooks in order: `01_data_exploration.ipynb` through `04_dashboard_prep.ipynb`. Each one builds on the previous.
 
----
+## Tools Used
 
-## Tech Stack
+Python (pandas, scikit-learn, matplotlib), SQL (SQLite with CTEs and window functions), Excel for final reports.
 
-- **Python:** pandas, scikit-learn, matplotlib, seaborn
-- **SQL:** SQLite with CTEs and window functions
-- **Tools:** Jupyter, openpyxl
+## Technical Notes
 
----
+Used SQL window functions to calculate running totals and customer metrics—much cleaner than nested subqueries. The main challenge was dealing with class imbalance (73% of customers don't churn), so I used `class_weight='balanced'` in the Random Forest model.
 
-## Key Findings
+Feature engineering made a bigger difference than hyperparameter tuning. Creating tenure groups and service counts as features improved accuracy more than tweaking max_depth or n_estimators.
 
-**Contract Type:** Strongest predictor of churn
-- Month-to-month: 42.7% churn rate
-- One year: 11.3% 
-- Two year: 2.8%
+SQLite doesn't have some PostgreSQL window functions, so I had to do certain aggregations in Python instead. Not ideal but it worked.
 
-**Tenure:** New customers at highest risk
-- 0-6 months: 51.2% churn
-- 37+ months: 6.3% churn
+## Sample Visualizations
 
-**Payment Method:** Auto-pay reduces churn
-- Electronic check: 45.3% churn
-- Credit card (auto): 15.2% churn
+![Churn by contract type](visualizations/01_churn_by_contract_pie.png)
+![Revenue at risk](visualizations/03_revenue_at_risk_bar.png)
 
-**Revenue Impact:** Churned customers average $74/mo vs $61/mo for retained
+## What's Next
 
----
-
-## Visualizations
-
-Key analysis outputs:
-
-<div align="center">
-  <img src="visualizations/03_revenue_at_risk_bar.png" alt="Revenue at Risk" width="45%">
-  <img src="visualizations/01_churn_by_contract_pie.png" alt="Churn by Contract" width="45%">
-</div>
-
-<div align="center">
-  <img src="visualizations/04_churn_by_tenure_line.png" alt="Churn by Tenure" width="45%">
-  <img src="visualizations/05_clv_segments_bar.png" alt="Customer Lifetime Value" width="45%">
-</div>
-
----
-
-
-
-
-
-## Notes
-
-**Approach:** Used window functions in SQL to calculate running customer metrics, which was more efficient than multiple subqueries. Feature engineering (tenure groups, service counts) had bigger impact on model performance than hyperparameter tuning.
-
-**Challenges:** Dealt with class imbalance (73% non-churn) using `class_weight='balanced'`. SQLite lacks some PostgreSQL functions so had to aggregate in Python for certain queries.
-
-**Future improvements:** Time-series survival analysis to predict *when* customers churn, not just if. XGBoost/LightGBM comparison for tabular data.
+Could improve this with survival analysis to predict *when* customers will churn, not just if they will. Also want to compare XGBoost/LightGBM—they usually beat Random Forest on tabular data.
 
