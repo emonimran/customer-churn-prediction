@@ -85,6 +85,22 @@ Run notebooks in order: `01_data_exploration.ipynb` → `02_sql_analysis.ipynb` 
 
 ---
 
+## Visualizations
+
+Key analysis outputs:
+
+<div align="center">
+  <img src="visualizations/03_revenue_at_risk_bar.png" alt="Revenue at Risk" width="45%">
+  <img src="visualizations/01_churn_by_contract_pie.png" alt="Churn by Contract" width="45%">
+</div>
+
+<div align="center">
+  <img src="visualizations/04_churn_by_tenure_line.png" alt="Churn by Tenure" width="45%">
+  <img src="visualizations/05_clv_segments_bar.png" alt="Customer Lifetime Value" width="45%">
+</div>
+
+---
+
 
 
 
